@@ -18,6 +18,8 @@ app.get('/', function(req, res){
 app.get('/', function(req, res){
   res.send("<h1>Thesis Project is up!</h1>");
 });
+
+//Blog Posts
   app.get('/blog/:title', function(req, res){
 
     let title = req.params.title;
@@ -26,7 +28,7 @@ app.get('/', function(req, res){
       res.send("This page is under construction");
     } else {
       let post = posts[title];
-      res.send(posts);
+      res.render('post');
     }
 
 });
