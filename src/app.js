@@ -6,7 +6,9 @@ const app     = express();
 
 //Route for root of server using Location '/', request and response
 app.get('/', function(req, res){
-  res.send("Thesis Project is up!");
+  res.send("<h1>Thesis Project is up!</h1>");
 })
 //Set Development Server 3000 or 8080
-app.listen(8080);
+app.listen(8080, function(){
+  console.log("Frontend Server is running on port 8080!")
+});
