@@ -27,8 +27,8 @@ app.get('/', function(req, res){
       res.status(503);
       res.send("This page is under construction");
     } else {
-      let post = posts[title];
-      res.render('post');
+      let post = posts[title] || {};
+      res.render('post', { post: post});
     }
 
 });
