@@ -6,7 +6,12 @@ const express = require('express');
 const posts = require('./mock/posts.json');
 const app     = express();
 
-
+//Retrieve and render HTML template
+app.set('view engine', 'pug');
+app.set('views', __dirname + './templates');
+app.get('/', function(req, res){
+  res.render('index.pug');
+});
 
 
 //Route for root of server using Location '/', request and response
