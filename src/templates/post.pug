@@ -1,17 +1,17 @@
 html(lang="en")
   head
-    title Blog Post page
+    title #{post.title}
   body
     section.post
       .container.text-right
         a(href="").text-faded view all
         .row
           .col-lg-8.col-lg-offset-2.text-center
-            h2.section-heading Blog Post 1
+            h2.section-heading #{post.title}
 
             hr.light
 
             p.text-faded
-              | Blog Post title
+              | #{post.description}
             .article
-              | Brunch forage synth, assumenda single-origin coffee hot chicken consectetur ethical.
+              | #{post.description}
